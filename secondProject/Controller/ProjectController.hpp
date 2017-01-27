@@ -6,9 +6,18 @@
 //  Copyright © 2017 CTEC. All rights reserved.
 //
 
-#ifndef Controller_hpp
-#define Controller_hpp
+#ifndef ProjectController_hpp
+#define ProjectController_hpp
 
-#include <stdio.h>
+class ProjectController
+{
+private:
+    void tryNumbers(int sent);
+    int changeNumber();
+    void changeWithPointer(int * numberPointer);
+    void changeHugely(int * changePointer);
+public:
+    void start();
+};
 
-#endif /* Controller_hpp */
+#endif /* ProjectController_hpp */

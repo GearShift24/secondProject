@@ -7,6 +7,7 @@
 //
 
 #include "ProjectController.hpp"
+#include "../Model/Timer.hpp"
 #include <iostream>
 
 using namespace std;
@@ -30,6 +31,10 @@ void ProjectController::changeHugely(int * diffNumber)
 
 void ProjectController :: start()
 {
+    Timer sillyTime = Timer();
+    sillyTime.startTimer();
+    
+    
     cout << "yooo fam" << endl;
     int myNumber = 5555;
     int bestNumber = 1;
@@ -50,7 +55,12 @@ void ProjectController :: start()
     cout <<"tried again to change the number " <<bestNumber << endl;
     
     
-
+    sillyTime.stopTimer();
+    sillyTime.displayTimerInformation();
+    
+    sillyTime.resetTimer();
+    cout << sillyTime.getExecutionTimeInMicroseconds() << endl;
+    
     
 }
 
